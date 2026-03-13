@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: hsl(161, 93%, 30%);
+  --color-primary-foreground: hsl(151, 80%, 95%);
+  --color-background: hsl(0, 0%, 96%); /* Light mode default per docs */
+  --color-card: hsl(0, 0%, 98%);
+  --color-border-glass: rgba(212, 212, 212, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+/* Glassmorphism Utilities from your docs */
+.glass-card {
+  @apply bg-white/60 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-sm;
+}
+
+.glass-card-hover {
+  @apply glass-card transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_30px_rgba(5,105,79,0.1)];
+}
